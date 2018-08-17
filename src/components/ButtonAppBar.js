@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import TextField from '@material-ui/core/TextField';
 
 const styles = {
   root: {
@@ -15,6 +16,11 @@ const styles = {
   flex: {
     flexGrow: 1,
     textAlign: 'left'
+  },
+  textField: {
+    marginLeft: 2,
+    marginRight: 2,
+    width: 200,
   },
   menuButton: {
     marginLeft: -12,
@@ -34,6 +40,15 @@ function ButtonAppBar(props) {
           <Typography variant="title" color="inherit" className={classes.flex}>
             {props.title}
           </Typography>
+
+          <TextField
+            id="search"
+            label="Search field"
+            type="search"
+            className={classes.textField}
+            margin="normal"
+          />
+
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
