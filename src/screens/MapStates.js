@@ -54,13 +54,13 @@ export const INDIA = {
 //https://raw.githubusercontent.com/tudorelu/Australia-json-data/master/ABS_LGA_2011.json
 //https://raw.githubusercontent.com/alwaysblazing/Australia-State-TopoJson-MapChart/master/au-states-topo.json
 export const AUSTRALIA = {
-	scope: 'austates',
+	scope: 'ABS_LGA_2011',
   geographyConfig: {
     popupOnHover: true,
     highlightOnHover: true,
     borderColor: '#444',
     borderWidth: 0.5,
-    dataUrl: 'https://raw.githubusercontent.com/alwaysblazing/Australia-State-TopoJson-MapChart/master/au-states-topo.json'
+    dataUrl: 'https://raw.githubusercontent.com/tudorelu/dashboard-app/master/src/data/map/ABS_LGA.topo.json'
     //dataJson: topoJsonData
   },
   fills: {
@@ -69,6 +69,17 @@ export const AUSTRALIA = {
     'MINOR': '#bada55',
     defaultFill: '#dddddd'
   },
+  data: {
+	 	IRL: {
+	    fillKey: 'LOW',
+	    numberOfThings: 2002
+    },
+    USA: {
+      fillKey: 'MEDIUM',
+      numberOfThings: 10381
+    }
+  },
+
   setProjection: function (element) {
       var projection = d3.geo.mercator()
           .center([150.77, -27.27]) // always in [East Latitude, North Longitude]
