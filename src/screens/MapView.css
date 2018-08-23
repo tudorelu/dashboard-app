@@ -1,19 +1,16 @@
 .App {
+  display: flex;
+  flex-direction: row;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.Card {
+  background-color:#000,
 }
 
 .Dashboard-content {
   display: flex;
   flex-direction: column;
-}
-
-.Map {
-   background-color: #fff;
 }
 
 .Dashboard-tab {

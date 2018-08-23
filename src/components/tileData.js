@@ -41,12 +41,14 @@ export const mailFolderListItems = (
         </ListItem>
       </Link>
 
-      <ListItem button>
-        <ListItemIcon>
-          <DraftsIcon />
-        </ListItemIcon>
-        <ListItemText primary="Drafts" />
-      </ListItem>
+      <Link to='/fourth'>
+        <ListItem button>
+          <ListItemIcon>
+            <DraftsIcon />
+          </ListItemIcon>
+          <ListItemText primary="Drafts" />
+        </ListItem>
+      </Link>
     </div>
 );
 
