@@ -13,7 +13,12 @@
 }
 
 .Map {
-   background-color: #fff;
+  flex: 1;
+  position: relative;
+  background-color: #fff;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  z-index:5;
 }
 
 .Dashboard-tab {

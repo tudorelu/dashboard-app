@@ -67,9 +67,10 @@ export default class Datamap extends React.Component {
 
 	render() {
 		const style = {
-			direction: 'flex',
+			flex: 1,
 			alignSelf: 'center',
 			alignItems: 'center',
+			marginTop: -40,
 			marginLeft: -200,
 			marginRight: 0,
 			width: '70%',

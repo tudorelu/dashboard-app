@@ -1,11 +1,10 @@
 .App {
   display: flex;
   flex-direction: row;
-  text-align: center;
 }
 
 .Card {
-  background-color:#000,
+
 }
 
 .Dashboard-content {

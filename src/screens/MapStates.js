@@ -60,8 +60,18 @@ export const AUSTRALIA = {
     highlightOnHover: true,
     borderColor: '#444',
     borderWidth: 0.5,
-    dataUrl: 'https://raw.githubusercontent.com/tudorelu/dashboard-app/master/src/data/map/ABS_LGA.topo.json'
+    dataUrl: 'https://raw.githubusercontent.com/tudorelu/dashboard-app/master/src/data/map/ABS_LGA.topo.json',
     //dataJson: topoJsonData
+    popupTemplate: function(geo, data) {
+    	return '<div class="hoverinfo"><strong>' 
+    	+ geo.properties.LGA_NAME11 + 
+    	'</strong></div>';
+		},
+  },
+    done: function(datamap) {
+      datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
+          alert(geography.properties.LGA_NAME11);
+      });
   },
   fills: {
     'MAJOR': '#306596',
@@ -70,7 +80,7 @@ export const AUSTRALIA = {
     defaultFill: '#dddddd'
   },
   data: {
-	 	IRL: {
+	 	SA: {
 	    fillKey: 'LOW',
 	    numberOfThings: 2002
     },

@@ -164,8 +164,29 @@ const Third = () => (
 );
 
 const Fourth = () => (
-  <div className="Map">
-    <MapView />
+  <div className="Dashboard-content">
+    <div className="Map">
+      <div className="Map">
+        <MapView />
+      </div>
+    </div>
+    
+    <div className="Dashboard-tab">
+      <SimpleCard title="Doughnut Chart">
+        <Doughnut data={chartData} />
+      </SimpleCard>
+
+      <SimpleCard title="Line Chart">
+        <Line data={chartData} />
+      </SimpleCard>
+    </div>
+
+    <div className="Dashboard-tab">
+      <SimpleCard title="Doughnut Chart" >
+        <Bar data={chartData} />
+      </SimpleCard>
+    </div>
+
   </div>
 );
 

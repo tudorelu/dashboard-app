@@ -14,11 +14,6 @@ const styles = {
   card: {
     minWidth: 275,
   },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
-  },
   title: {
     marginBottom: 16,
     fontSize: 14,
@@ -30,7 +25,6 @@ const styles = {
 
 function SimpleCard(props) {
   const { classes } = props;
-  const bull = <span className={classes.bullet}>•</span>;
   return (
     <div className={classes.container}>
       <Card className={classes.card}>

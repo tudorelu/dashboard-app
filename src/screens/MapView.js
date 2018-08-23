@@ -75,21 +75,18 @@ export default class MapView extends React.Component {
         }, window.example));
     }
 
-    render() {
-        const style = {
-            title: {
-                marginBottom: 16,
-                fontSize: 14,
-            },
-        }
+    render() { 
         return (
             <div className="App"> 
+                <Card>
+                    <CardContent>
 
-                <Datamap 
-                    {...this.state} 
-                    //setProjection={this.setProjection}
-                    />
-                
+                        <Datamap 
+                            {...this.state} 
+                            //setProjection={this.setProjection}
+                            />
+                    </CardContent>
+                </Card>            
             </div>
         );
     }
