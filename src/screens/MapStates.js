@@ -39,8 +39,8 @@ export const INDIA = {
       defaultFill: '#dddddd'
   },
   data: {
-      'JH': { fillKey: 'MINOR' },
-      'MH': { fillKey: 'MINOR' }
+      '56620': { fillKey: 'MINOR' },
+      "72330": { fillKey: 'MINOR' }
   },
   setProjection: function (element) {
       var projection = d3.geo.mercator()
@@ -55,9 +55,12 @@ export const INDIA = {
 //https://raw.githubusercontent.com/alwaysblazing/Australia-State-TopoJson-MapChart/master/au-states-topo.json
 export const AUSTRALIA = {
 	scope: 'ABS_LGA_2011',
+  position: 'relative',
+  overflow: 'visible',
   geographyConfig: {
     popupOnHover: true,
     highlightOnHover: true,
+    highlightFillColor: '#FC8D59',
     borderColor: '#444',
     borderWidth: 0.5,
     dataUrl: 'https://raw.githubusercontent.com/tudorelu/dashboard-app/master/src/data/map/ABS_LGA.topo.json',
@@ -68,26 +71,15 @@ export const AUSTRALIA = {
     	'</strong></div>';
 		},
   },
-    done: function(datamap) {
-      datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
-          alert(geography.properties.LGA_NAME11);
-      });
-  },
   fills: {
     'MAJOR': '#306596',
     'MEDIUM': '#0fa0fa',
     'MINOR': '#bada55',
-    defaultFill: '#dddddd'
+    defaultFill: '#fff'
   },
   data: {
-	 	SA: {
-	    fillKey: 'LOW',
-	    numberOfThings: 2002
-    },
-    USA: {
-      fillKey: 'MEDIUM',
-      numberOfThings: 10381
-    }
+      '56620': { fillKey: 'MINOR' },
+      "72330": { fillKey: 'MINOR' }
   },
 
   setProjection: function (element) {

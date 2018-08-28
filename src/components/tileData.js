@@ -8,7 +8,7 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import DraftsIcon from '@material-ui/icons/Drafts';
 import StarIcon from '@material-ui/icons/Star';
 import SendIcon from '@material-ui/icons/Send';
-import MailIcon from '@material-ui/icons/Mail';
+import MapIcon from '@material-ui/icons/Map';
 import DeleteIcon from '@material-ui/icons/Delete';
 import ReportIcon from '@material-ui/icons/Report';
 
@@ -21,17 +21,18 @@ export const mailFolderListItems = (
           <ListItemIcon>
             <InboxIcon />
           </ListItemIcon>
-          <ListItemText primary="Inbox" />
+          <ListItemText primary="Dashboard" />
         </ListItem>
       </Link>
-      <Link to='/second'>
+      <Link to='/depth'>
         <ListItem button>
           <ListItemIcon>
             <StarIcon />
           </ListItemIcon>
-          <ListItemText primary="Starred" />
+          <ListItemText primary="In Depth" />
         </ListItem>
       </Link>
+      {/*
       <Link to='/third'>
         <ListItem button>
           <ListItemIcon>
@@ -49,17 +50,21 @@ export const mailFolderListItems = (
           <ListItemText primary="Drafts" />
         </ListItem>
       </Link>
+    */}
     </div>
 );
 
 export const otherMailFolderListItems = (
   <div>
-    <ListItem button>
-      <ListItemIcon>
-        <MailIcon />
-      </ListItemIcon>
-      <ListItemText primary="All mail" />
-    </ListItem>
+    <Link to='/world'>
+      <ListItem button>
+        <ListItemIcon>
+          <MapIcon />
+        </ListItemIcon>
+        <ListItemText primary="World" />
+      </ListItem>
+    </Link>
+    {/*
     <ListItem button>
       <ListItemIcon>
         <DeleteIcon />
@@ -72,5 +77,6 @@ export const otherMailFolderListItems = (
       </ListItemIcon>
       <ListItemText primary="Spam" />
     </ListItem>
+  */}
   </div>
 );

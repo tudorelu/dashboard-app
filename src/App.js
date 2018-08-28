@@ -10,10 +10,12 @@ import SimpleCard from './components/SimpleCard.js';
 import Datamap from './components/Datamap.js';
 
 import MapView from './screens/MapView.js';
+import MainView from './screens/MainView.js';
 
-import {Doughnut, Line, Bar} from 'react-chartjs-2';
+import {Doughnut, Line, Bar, Radar} from 'react-chartjs-2';
 
 import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -34,12 +36,11 @@ class App extends Component {
       <Router>
         <div className="App">
 
-          <MiniDrawer title="Dashboard">
+          <MiniDrawer title="Polisee">
 
             <Route exact path="/" component={Main} />
-            <Route path="/second" component={Second} />
-            <Route path="/third" component={Third} />
-            <Route path="/fourth" component={Fourth} />
+            <Route path="/depth" component={Fourth} />
+            <Route path="/world" component={World} />
 
           </MiniDrawer>
         
@@ -50,49 +51,12 @@ class App extends Component {
 }
 
 const Main = () => (
-  <div className="Dashboard-content">
-
-    <div className="Dashboard-tab">
-      <SimpleCard title="Doughnut Chart">
-        <Doughnut data={chartData} />
-      </SimpleCard>
-
-      <SimpleCard title="Line Chart">
-        <Line data={chartData} />
-      </SimpleCard>
-    </div>
-
-    <div className="Dashboard-tab">
-      <SimpleCard title="Doughnut Chart" >
-        <Bar data={chartData} />
-      </SimpleCard>
-    </div>
-    
-    <Button variant="contained" color="primary">
-      Hello World
-    </Button>
-
-
-  </div>
-);
-
-const Second = () => (
-  <div className="Dashboard-content">
-
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <h1 className="App-title">Welcome to Second</h1>
-    </header>
-    
-    <p className="App-intro">
-      To get started, edit <code>src/App.js</code> and save to reload.
-    </p>
-  </div>
+  <MainView />
 );
 
 const colors = d3.scale.category10();
 
-const Third = () => (
+const World = () => (
 
   <div className="Map">
 
@@ -165,10 +129,46 @@ const Third = () => (
 
 const Fourth = () => (
   <div className="Dashboard-content">
+    
+    <div className="Dashboard-tab">
+      <SimpleCard title="In Depth Information">
+        <Typography> This is just an example of how an in-depth view into the data would look like. </Typography>
+      </SimpleCard>
+    </div>
+
+    <div className="Dashboard-tab">
+      <SimpleCard title="Doughnut Chart">
+        <Doughnut data={chartData} />
+      </SimpleCard>
+
+      <SimpleCard title="Line Chart">
+        <Line data={chartData} />
+      </SimpleCard>
+    </div>
+
+    <div className="Dashboard-tab">
+      <SimpleCard title="Bar Chart" >
+        <Bar data={chartData} />
+      </SimpleCard>
+
+      <SimpleCard title="Radar Chart" >
+        <Radar data={chartData} />
+      </SimpleCard>
+    </div>
+    
+    <Button variant="contained" color="primary">
+      Hello World
+    </Button>
+
+
+  </div>
+);
+
+const Fifth = () => (
+
+  <div className="Dashboard-content">
     <div className="Map">
-      <div className="Map">
-        <MapView />
-      </div>
+        <MapView/>
     </div>
     
     <div className="Dashboard-tab">
@@ -179,6 +179,7 @@ const Fourth = () => (
       <SimpleCard title="Line Chart">
         <Line data={chartData} />
       </SimpleCard>
+
     </div>
 
     <div className="Dashboard-tab">

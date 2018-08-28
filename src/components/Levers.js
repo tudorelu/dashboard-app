@@ -7,48 +7,62 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
+import VerticalSlider from './VerticalSlider.js';
+
 const styles = {
   container:{
     flex:1,
     marginRight:20,
   },
-  card: {
-    minWidth: 275,
+  card: { 
+    flex:1,
+    flexDirection:'row', 
   },
+	variable:{
+		fontSize:10,
+		fontWeight: 'bold',
+	},
+	value:{
+		fontSize:9
+	},
   title: {
     marginBottom: 16,
-    fontSize: 14,
+    fontSize: 16,
   },
   pos: {
     marginBottom: 12,
   },
 };
 
-function SimpleCard(props) {
+function Levers(props) {
   const { classes } = props;
   return (
     <div className={classes.container}>
       <Card className={classes.card}>
+
+
         <CardContent>
           <Typography className={classes.title} color="textSecondary">
-            {props.title}
+            Levers
           </Typography>
 
-          {props.children}
-        
+      	<VerticalSlider callback={(data)=>props.callback(data)}/> 
+
         </CardContent>
-        {/*
+ 			{/*
+       
         <CardActions>
           <Button size="small">Learn More</Button>
         </CardActions>
-        */}
+
+      */}
       </Card>
     </div>
   );
 }
 
-SimpleCard.propTypes = {
+Levers.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(SimpleCard);
+export default withStyles(styles)(Levers);

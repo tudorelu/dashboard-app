@@ -70,10 +70,12 @@ export default class Datamap extends React.Component {
 			flex: 1,
 			alignSelf: 'center',
 			alignItems: 'center',
-			marginTop: -40,
-			marginLeft: -200,
+			marginTop: -60,
+			marginLeft: -250,
 			marginRight: 0,
-			width: '70%',
+			height: '100%',
+			width: '90%',
+			resizeMode:'contain',
 		};
 
 		return <div ref="container" style={style}></div>;

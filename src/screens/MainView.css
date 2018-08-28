@@ -3,10 +3,6 @@
   flex-direction: row;
 }
 
-.Card {
-
-}
-
 .Dashboard-content {
   display: flex;
   flex-direction: column;
